@@ -1,14 +1,17 @@
 class Account(object):
     def __init__(self, rate):
+        """帐号类，amount 是美元金额"""
         self.__amt = 0
         self.rate = rate
 
     @property
     def amount(self):
+        """账户余额(美元)"""
         return self.__amt
 
     @property
     def cny(self):
+        """账户余额(人民币)"""
         return self.__amt * self.rate
 
     @amount.setter
@@ -20,7 +23,8 @@ class Account(object):
 
 
 if __name__ == '__main__':
-    acc = Account(rate=6.6)
+    # 汇率
+    acc = Account(rate=6.63)
     acc.amount = 20
     print("Dollar amount:", acc.amount)
     print("In CNY:", acc.cny)
