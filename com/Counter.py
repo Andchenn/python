@@ -13,3 +13,8 @@ class Counter(object):
         else:
             self.current += 1
             return self.current - 1
+
+
+c = Counter(1, 5)
+for i in c:
+    print(i, end=' ')
