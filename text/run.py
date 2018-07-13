@@ -1,3 +1,4 @@
+# 方法一
 year = int(input("输入一个年份："))
 if (year % 4) == 0:
     if (year % 100) == 0:
@@ -9,5 +10,12 @@ if (year % 4) == 0:
     else:
         # 非整百年能被4整除的为闰年
         print("{0}是润年".format(year))
+else:
+    print("{0}不是润年".format(year))
+
+# 方法二
+year = int(input("输入一个年份："))
+if (year % 4) == 0 and (year % 100) != 0 or (year % 400) == 0:
+    print("{0}是润年".format(year))
 else:
     print("{0}不是润年".format(year))
